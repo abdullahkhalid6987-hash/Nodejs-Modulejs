@@ -1,0 +1,27 @@
+<%- include('../partials/head') %>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 antialiased">
+    <div class="flex h-screen overflow-hidden">
+        <%- include('../partials/navbar') %>
+        <main class="flex-1 flex flex-col overflow-y-auto">
+            <header class="bg-white border-b border-gray-200 h-16 flex items-center justify-between px-8 shrink-0">
+                <h1 class="text-xl font-bold text-gray-900">Top Performers</h1>
+                <a href="admin/add-employee" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">+ Add Employee</a>
+            </header>
+            <div class="p-8 flex-1">
+                <% employees.forEach(employee =>{  %>
+                <div class="bg-white border border-amber-200 rounded-xl p-6 relative overflow-hidden max-w-sm mb-2">
+                    <span class="absolute top-0 right-0 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">★ MVP</span>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-xl font-bold text-amber-600"><% const initials = employee.name.split(' ')
+                            const letters = initials.length === 1 ? initials[0][0] : initials[0]+initials[initials.length-1][0].toUpperCase() %>
+                        <%= letters %></div>
+                        <div><h4 class="font-bold text-gray-900"><%= employee.name %></h4><p class="text-xs text-gray-500">140% Deliverables Met</p></div>
+                    </div>
+                </div>
+                <% }) %>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

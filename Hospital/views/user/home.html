@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/output.css">
+    <title>Document</title>
+</head>
+
+<body class="scroll-smooth">
+   <nav class="text-white w-full py-5 bg-blue-950/90 backdrop-blur-3xl">
+
+    <!-- Hidden checkbox -->
+    <input
+        type="checkbox"
+        id="menu-toggle"
+        class="hidden peer"
+    >
+
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+
+        <!-- Logo -->
+        <div class="text-xl font-bold">
+            MediCare
+        </div>
+
+        <!-- Hamburger -->
+        <label
+            for="menu-toggle"
+            class="md:hidden text-3xl cursor-pointer"
+        >
+            ☰
+        </label>
+
+        <!-- Desktop menu -->
+        <ul class="hidden md:flex justify-center items-center space-x-6">
+            <li>
+                <a class="cursor-pointer hover:bg-white/10 rounded-4xl px-3 py-1">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a class="cursor-pointer hover:bg-white/10 rounded-4xl px-3 py-1">
+                    Login
+                </a>
+            </li>
+
+            <li>
+                <a class="cursor-pointer hover:bg-white/10 rounded-4xl px-3 py-1">
+                    Signup
+                </a>
+            </li>
+
+            <li>
+                <a class="cursor-pointer hover:bg-white/10 rounded-4xl px-3 py-1">
+                    Appointment
+                </a>
+            </li>
+
+            <li>
+                <a class="cursor-pointer hover:bg-white/10 rounded-4xl px-3 py-1">
+                    Doctors
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="hidden peer-checked:block md:hidden">
+
+        <ul class="flex flex-col items-center gap-4 pt-5">
+
+            <li>
+                <a class="cursor-pointer hover:bg-white hover:text-black rounded-4xl px-4 py-2">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a class="cursor-pointer hover:bg-white hover:text-black rounded-4xl px-4 py-2">
+                    Login
+                </a>
+            </li>
+
+            <li>
+                <a class="cursor-pointer hover:bg-white hover:text-black rounded-4xl px-4 py-2">
+                    Signup
+                </a>
+            </li>
+
+            <li>
+                <a class="cursor-pointer hover:bg-white hover:text-black rounded-4xl px-4 py-2">
+                    Appointment
+                </a>
+            </li>
+
+            <li>
+                <a class="cursor-pointer hover:bg-white hover:text-black rounded-4xl px-4 py-2">
+                    Doctors
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+    <main>
+        <div
+            class="w-full h-fit md:h-screen bg-[url('../../public/background1.jpg')] bg-cover bg-no-repeat bg-center text-3xl text-white">
+            <div class=" h-full bg-slate-950/40 flex flex-col items-center justify-center py-24">
+                <div class="text-center w-1/2">Your health deserves the best care. Find trusted doctors and book appointments with ease — we’re here to make healthcare simple.</div>
+                <div class="text-2xl bg-teal-600 hover:bg-teal-700 rounded-2xl py-2 px-5 mt-5 cursor-pointer">Book Apointment Now</div>
+            </div>
+        </div>
+        <div class="text-center text-5xl py-10 bg-slate-50">Why Us?</div>
+
+        <div class="space-y-10 h-[205vh] md:h-[265vh] bg-slate-50">
+
+            <div class="h-fit py-15 flex flex-col-reverse md:flex-row items-center justify-center sticky top-10 bg-white border border-slate-200 shadow-lg rounded-3xl md:p-10 mx-8">
+                <div class="w-auto p-10"><h2 class="text-3xl font-bold mb-4 mt-4">
+                            Find the Right Doctor
+                        </h2>
+
+                        <p class="text-gray-600 text-lg">
+                            Find experienced and trusted doctors that match
+                            your healthcare needs.
+                        </p></div>
+                <img class="w-11/12 md:w-1/2 border rounded-3xl border-gray-500" src="../../public/doctor.jpg" alt="">
+            </div>
+
+            <div class="h-fit py-15 flex flex-col md:flex-row items-center justify-center sticky top-20 bg-white border border-slate-200 shadow-lg rounded-3xl md:p-10 mx-6">
+                <img class="w-11/12 md:w-1/2 border rounded-3xl border-gray-500" src="../../public/apointment.jpg" alt="">
+                <div class="w-auto p-10"> <h2 class="text-3xl font-bold mb-4">
+                            Book an Appointment
+                        </h2>
+
+                        <p class="text-gray-600 text-lg">
+                            Schedule an appointment with your preferred
+                            doctor quickly and easily.
+                        </p></div>
+            </div>
+
+            <div class="h-fit py-15 flex flex-col-reverse md:flex-row items-center justify-center sticky top-30 bg-white border border-slate-200 shadow-lg rounded-3xl md:p-10 mx-4">
+                <div class="w-auto p-10">    <h2 class="text-3xl font-bold mb-4">
+                            Never Miss Your Appointment
+                        </h2>
+
+                        <p class="text-gray-600 text-lg">
+                            Keep track of your appointments and manage your
+                            healthcare schedule with ease.
+                        </p></div>
+                <img class="w-11/12 md:w-1/2 border rounded-3xl border-gray-500" src="../../public/time.jpg" alt="">
+            </div>
+
+        </div>
+        
+    </main>
+   <footer class="bg-blue-950 text-white"> <div class="max-w-7xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+        <!-- Brand -->
+        <div>
+            <h2 class="text-2xl font-bold mb-4">MediCare</h2>
+            <p class="text-blue-200 leading-relaxed">
+                Making healthcare simple and accessible. Find trusted doctors
+                and book appointments with ease.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-3 text-blue-200">
+                <li><a href="#" class="hover:text-white transition">Home</a></li>
+                <li><a href="#" class="hover:text-white transition">Doctors</a></li>
+                <li><a href="#" class="hover:text-white transition">Appointments</a></li>
+                <li><a href="#" class="hover:text-white transition">About Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-3 text-blue-200">
+                <li>Find a Doctor</li>
+                <li>Book an Appointment</li>
+                <li>Medical Consultation</li>
+                <li>Healthcare Support</li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+            <ul class="space-y-3 text-blue-200">
+                <li>📧 support@medicare.com</li>
+                <li>📞 +92 300 1234567</li>
+                <li>📍 Lahore, Pakistan</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="border-t border-blue-800 mt-10 pt-6 text-center text-blue-300">
+        <p>
+            © 2026 MediCare. All rights reserved.
+        </p>
+    </div>
+
+</div>
+
+</footer>
+</body>
+
+</html>

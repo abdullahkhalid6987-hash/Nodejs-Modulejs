@@ -1,0 +1,20 @@
+<%- include('../partials/head') %>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 antialiased">
+    <div class="flex h-screen overflow-hidden">
+        <main class="flex-1 p-8 overflow-y-auto">
+            <div class="bg-white border border-gray-200 rounded-xl p-6 space-y-4 max-w-2xl mx-auto mt-10">
+                <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+                    <div><h3 class="text-xl font-bold text-gray-900"><%= employee.name %></h3><p class="text-sm text-gray-500">Employee ID: <%= employee.id %></p></div>
+                    <a href="edit-employee" class="border border-gray-300 text-gray-700 hover:bg-gray-50 px-4 py-2 rounded-lg text-sm font-medium transition">Edit Profile</a>
+                </div>
+                <div class="grid grid-cols-2 gap-6 text-sm">
+                    <div><span class="block text-xs uppercase text-gray-400 font-medium">Email</span><span class="text-gray-900 font-medium"><%= employee.email %></span></div>
+                    <div><span class="block text-xs uppercase text-gray-400 font-medium">Role</span><span class="text-gray-900 font-medium"><%= employee.role %></span></div>
+                </div>
+                <div class="pt-4"><a href="/admin/employees" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">&larr; Back to Employees</a></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<%- include('../partials/head') %>
+
+</head> <body class="bg-gray-50 text-gray-800"> <!-- Navbar -->
+
+<%- include('../partials/nav') %>
+
+<main class="max-w-4xl mx-auto px-6 py-10">
+<!-- Back Button -->
+<a
+  href="/students"
+  class="inline-flex items-center gap-2 mb-6 text-sm font-medium text-gray-500 hover:text-indigo-600 transition"
+>
+  <span>←</span>
+  Back to Students
+</a>
+
+<!-- Profile Card -->
+<div class="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden p-5">
+
+  <!-- Top Banner -->
+  <div class="h-32 bg-gradient-to-r from-indigo-600 to-purple-600">
+  </div>
+
+  <!-- Profile Header -->
+  <div class="px-8 pb-8">
+
+    <div class="flex flex-col sm:flex-row sm:items-end gap-5 -mt-12">
+
+      <!-- Avatar -->
+      <div
+        class="w-24 h-24 rounded-2xl bg-white p-1 shadow-md"
+      >
+        <div
+          class="w-full h-full rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 text-2xl font-bold"
+        >
+          <%
+            const initials = student.name
+              .split(' ')
+              .map(name => name[0].toUpperCase());
+
+            const display = initials.length === 1
+              ? initials[0]
+              : initials[0] + initials[initials.length - 1];
+          %>
+
+          <%= display %>
+        </div>
+      </div>
+
+      <!-- Name & Major -->
+      <div class="flex-1">
+
+        <h1 class="text-3xl font-bold text-gray-900">
+          <%= student.name %>
+        </h1>
+
+        <p class="mt-1 text-gray-500">
+          <%= student.major %>
+        </p>
+
+      </div>
+
+      <!-- Grade Badge -->
+      <div>
+        <span
+          class="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-semibold bg-green-100 text-green-700"
+        >
+          Grade: <%= student.grade %>
+        </span>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-100 mt-8"></div>
+
+    <!-- Student Information -->
+    <div class="mt-8">
+
+      <h2 class="text-lg font-semibold text-gray-900">
+        Student Information
+      </h2>
+
+      <p class="text-sm text-gray-500 mt-1">
+        Basic information about this student.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-4 mt-6">
+
+        <!-- Student ID -->
+        <div class="bg-gray-50 border border-gray-100 rounded-xl p-5">
+          <p class="text-sm text-gray-500">
+            Student ID
+          </p>
+
+          <p class="mt-2 text-lg font-semibold text-gray-900">
+            #<%= student.id %>
+          </p>
+        </div>
+
+        <!-- Age -->
+        <div class="bg-gray-50 border border-gray-100 rounded-xl p-5">
+          <p class="text-sm text-gray-500">
+            Age
+          </p>
+
+          <p class="mt-2 text-lg font-semibold text-gray-900">
+            <%= student.age %> years old
+          </p>
+        </div>
+
+        <!-- Major -->
+        <div class="bg-gray-50 border border-gray-100 rounded-xl p-5">
+          <p class="text-sm text-gray-500">
+            Major
+          </p>
+
+          <p class="mt-2 text-lg font-semibold text-gray-900">
+            <%= student.major %>
+          </p>
+        </div>
+
+        <!-- Grade -->
+        <div class="bg-gray-50 border border-gray-100 rounded-xl p-5">
+          <p class="text-sm text-gray-500">
+            Grade
+          </p>
+
+          <p class="mt-2 text-lg font-semibold text-green-600">
+            <%= student.grade %>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Actions -->
+    <div class="border-t border-gray-100 mt-8 pt-6 flex flex-col sm:flex-row gap-3">
+
+      <!-- Back -->
+      <a
+        href="/students"
+        class="flex-1 text-center border border-gray-200 bg-white text-gray-700 px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50 transition"
+      >
+        Back to Students
+      </a>
+
+      <!-- Remove -->
+      <form
+        action="/remove-best-students/<%= student.id %>"
+        method="POST"
+        class="flex-1"
+      >
+        <button
+          type="submit"
+          class="w-full bg-red-600 text-white px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-red-700 transition"
+        >
+          Remove Student
+        </button>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+</main> <!-- Footer -->
+
+<%- include('../partials/footer') %>
+
+</body> </html>

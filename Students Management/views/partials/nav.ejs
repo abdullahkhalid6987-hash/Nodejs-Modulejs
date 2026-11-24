@@ -1,0 +1,27 @@
+<nav class="bg-white border-b">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <a href="/" class="text-xl font-bold text-indigo-600">
+        StudentApp
+      </a>
+
+      <div class="flex gap-5 text-sm">
+        <a href="/" class="<%= (pageName == 'Home') ? 'text-indigo-600' : 'text-gray-600' %> font-medium  hover:text-indigo-600">
+          Home
+        </a>
+
+        <a href="/students" class="<%= (pageName == 'Students') ? 'text-indigo-600' : 'text-gray-600' %>  hover:text-indigo-600">
+          Students
+        </a>
+
+        <a href="/best-students" class="<%= (pageName == 'Best Students') ? 'text-indigo-600' : 'text-gray-600' %> hover:text-indigo-600">
+          Best Students
+        </a>
+
+        <a href="/admin/students" class="<%= (pageName == 'Admin') ? 'text-indigo-600' : 'text-gray-600' %> hover:text-indigo-600">
+          Admin
+        </a>
+      </div>
+
+    </div>
+  </nav>

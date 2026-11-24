@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../public/output.css">
+
+    <title>MediCare - Host Dashboard</title>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+
+
+    <!-- Navbar -->
+    <nav class="bg-blue-950 text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+            <div class="flex items-center gap-3">
+
+                <a href="#" class="text-xl font-bold">
+                    MediCare
+                </a>
+
+                <span class="hidden sm:block text-blue-400">
+                    |
+                </span>
+
+                <span class="hidden sm:block text-sm text-blue-200">
+                    Host Dashboard
+                </span>
+
+            </div>
+
+
+            <div class="flex items-center gap-5">
+
+                <a
+                    href="#"
+                    class="hidden md:block text-blue-200 hover:text-white transition"
+                >
+                    Dashboard
+                </a>
+
+                <a
+                    href="#"
+                    class="hidden md:block text-blue-200 hover:text-white transition"
+                >
+                    Doctors
+                </a>
+
+                <a
+                    href="#"
+                    class="text-blue-200 hover:text-white transition"
+                >
+                    Logout
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main -->
+    <main class="max-w-7xl mx-auto px-5 md:px-8 py-10">
+
+
+        <!-- Header -->
+        <div class="mb-8">
+
+            <p class="text-teal-600 font-semibold mb-2">
+                Administration
+            </p>
+
+            <h1 class="text-4xl font-bold">
+                Doctor Management
+            </h1>
+
+            <p class="text-slate-500 mt-2">
+                Manage which doctors are visible and available to patients.
+            </p>
+
+        </div>
+
+
+        <!-- Stats -->
+        <div
+            class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-12"
+        >
+
+            <!-- Allowed -->
+            <div
+                class="bg-white border border-slate-200
+                rounded-2xl p-6 shadow-sm"
+            >
+
+                <div class="flex items-center justify-between">
+
+                    <div>
+
+                        <p class="text-slate-500 text-sm">
+                            Allowed Doctors
+                        </p>
+
+                        <p class="text-3xl font-bold mt-2">
+                            24
+                        </p>
+
+                    </div>
+
+                    <div
+                        class="w-12 h-12 rounded-full
+                        bg-green-100 text-green-600
+                        flex items-center justify-center text-xl"
+                    >
+                        ✓
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Removed -->
+            <div
+                class="bg-white border border-slate-200
+                rounded-2xl p-6 shadow-sm"
+            >
+
+                <div class="flex items-center justify-between">
+
+                    <div>
+
+                        <p class="text-slate-500 text-sm">
+                            Removed Doctors
+                        </p>
+
+                        <p class="text-3xl font-bold mt-2">
+                            6
+                        </p>
+
+                    </div>
+
+                    <div
+                        class="w-12 h-12 rounded-full
+                        bg-red-100 text-red-600
+                        flex items-center justify-center text-xl"
+                    >
+                        ×
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ========================= -->
+        <!-- ALLOWED DOCTORS -->
+        <!-- ========================= -->
+
+        <section class="mb-16">
+
+
+            <!-- Section Header -->
+            <div
+                class="flex flex-col sm:flex-row
+                sm:items-center sm:justify-between
+                gap-4 mb-6"
+            >
+
+                <div>
+
+                    <div class="flex items-center gap-3">
+
+                        <h2 class="text-2xl font-bold">
+                            Allowed Doctors
+                        </h2>
+
+                        <span
+                            class="bg-green-100 text-green-700
+                            text-sm font-medium
+                            px-3 py-1 rounded-full"
+                        >
+                            24 Doctors
+                        </span>
+
+                    </div>
+
+                    <p class="text-slate-500 mt-1">
+                        These doctors are currently visible to patients.
+                    </p>
+
+                </div>
+
+
+                <!-- Search -->
+                <input
+                    type="text"
+                    placeholder="Search doctors..."
+                    class="w-full sm:w-64 px-4 py-2.5
+                    rounded-xl border border-slate-300
+                    bg-white outline-none
+                    focus:border-teal-500
+                    focus:ring-4 focus:ring-teal-500/10"
+                >
+
+            </div>
+
+
+
+            <!-- Allowed Doctors Grid -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4
+                gap-6"
+            >
+
+
+                <!-- Doctor -->
+                <div
+                    class="bg-white rounded-3xl
+                    border border-slate-200
+                    overflow-hidden shadow-sm
+                    hover:shadow-lg transition"
+                >
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Ahmed Khan"
+                        class="w-full h-56 object-cover"
+                    >
+
+                    <div class="p-5">
+
+                        <div class="flex justify-between items-start gap-2">
+
+                            <div>
+
+                                <h3 class="text-lg font-bold">
+                                    Dr. Ahmed Khan
+                                </h3>
+
+                                <p class="text-teal-600 text-sm font-medium">
+                                    Cardiologist
+                                </p>
+
+                            </div>
+
+                            <span
+                                class="w-3 h-3 bg-green-500
+                                rounded-full mt-2"
+                            ></span>
+
+                        </div>
+
+
+                        <p class="text-sm text-slate-500 mt-3">
+                            12 years experience
+                        </p>
+
+
+                        <div class="border-t border-slate-200 my-4"></div>
+
+
+                        <div class="flex gap-2">
+
+                            <button
+                                class="flex-1 py-2 rounded-xl
+                                bg-red-50 text-red-600
+                                font-medium text-sm
+                                hover:bg-red-100
+                                transition cursor-pointer"
+                            >
+                                Remove
+                            </button>
+
+                            <button
+                                class="px-4 py-2 rounded-xl
+                                border border-slate-300
+                                text-slate-600
+                                hover:bg-slate-100
+                                transition cursor-pointer"
+                            >
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Doctor -->
+                <div
+                    class="bg-white rounded-3xl
+                    border border-slate-200
+                    overflow-hidden shadow-sm
+                    hover:shadow-lg transition"
+                >
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Sarah Ali"
+                        class="w-full h-56 object-cover"
+                    >
+
+                    <div class="p-5">
+
+                        <div class="flex justify-between items-start gap-2">
+
+                            <div>
+
+                                <h3 class="text-lg font-bold">
+                                    Dr. Sarah Ali
+                                </h3>
+
+                                <p class="text-teal-600 text-sm font-medium">
+                                    Dermatologist
+                                </p>
+
+                            </div>
+
+                            <span
+                                class="w-3 h-3 bg-green-500
+                                rounded-full mt-2"
+                            ></span>
+
+                        </div>
+
+
+                        <p class="text-sm text-slate-500 mt-3">
+                            9 years experience
+                        </p>
+
+
+                        <div class="border-t border-slate-200 my-4"></div>
+
+
+                        <div class="flex gap-2">
+
+                            <button
+                                class="flex-1 py-2 rounded-xl
+                                bg-red-50 text-red-600
+                                font-medium text-sm
+                                hover:bg-red-100
+                                transition cursor-pointer"
+                            >
+                                Remove
+                            </button>
+
+                            <button
+                                class="px-4 py-2 rounded-xl
+                                border border-slate-300
+                                text-slate-600
+                                hover:bg-slate-100
+                                transition cursor-pointer"
+                            >
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Doctor -->
+                <div
+                    class="bg-white rounded-3xl
+                    border border-slate-200
+                    overflow-hidden shadow-sm
+                    hover:shadow-lg transition"
+                >
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Usman Malik"
+                        class="w-full h-56 object-cover"
+                    >
+
+                    <div class="p-5">
+
+                        <div class="flex justify-between items-start gap-2">
+
+                            <div>
+
+                                <h3 class="text-lg font-bold">
+                                    Dr. Usman Malik
+                                </h3>
+
+                                <p class="text-teal-600 text-sm font-medium">
+                                    General Physician
+                                </p>
+
+                            </div>
+
+                            <span
+                                class="w-3 h-3 bg-green-500
+                                rounded-full mt-2"
+                            ></span>
+
+                        </div>
+
+
+                        <p class="text-sm text-slate-500 mt-3">
+                            15 years experience
+                        </p>
+
+
+                        <div class="border-t border-slate-200 my-4"></div>
+
+
+                        <div class="flex gap-2">
+
+                            <button
+                                class="flex-1 py-2 rounded-xl
+                                bg-red-50 text-red-600
+                                font-medium text-sm
+                                hover:bg-red-100
+                                transition cursor-pointer"
+                            >
+                                Remove
+                            </button>
+
+                            <button
+                                class="px-4 py-2 rounded-xl
+                                border border-slate-300
+                                text-slate-600
+                                hover:bg-slate-100
+                                transition cursor-pointer"
+                            >
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Doctor -->
+                <div
+                    class="bg-white rounded-3xl
+                    border border-slate-200
+                    overflow-hidden shadow-sm
+                    hover:shadow-lg transition"
+                >
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Fatima Noor"
+                        class="w-full h-56 object-cover"
+                    >
+
+                    <div class="p-5">
+
+                        <div class="flex justify-between items-start gap-2">
+
+                            <div>
+
+                                <h3 class="text-lg font-bold">
+                                    Dr. Fatima Noor
+                                </h3>
+
+                                <p class="text-teal-600 text-sm font-medium">
+                                    Pediatrician
+                                </p>
+
+                            </div>
+
+                            <span
+                                class="w-3 h-3 bg-green-500
+                                rounded-full mt-2"
+                            ></span>
+
+                        </div>
+
+
+                        <p class="text-sm text-slate-500 mt-3">
+                            11 years experience
+                        </p>
+
+
+                        <div class="border-t border-slate-200 my-4"></div>
+
+
+                        <div class="flex gap-2">
+
+                            <button
+                                class="flex-1 py-2 rounded-xl
+                                bg-red-50 text-red-600
+                                font-medium text-sm
+                                hover:bg-red-100
+                                transition cursor-pointer"
+                            >
+                                Remove
+                            </button>
+
+                            <button
+                                class="px-4 py-2 rounded-xl
+                                border border-slate-300
+                                text-slate-600
+                                hover:bg-slate-100
+                                transition cursor-pointer"
+                            >
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- REMOVED DOCTORS -->
+        <!-- ========================= -->
+
+        <section>
+
+
+            <!-- Section Header -->
+            <div class="mb-6">
+
+                <div class="flex items-center gap-3">
+
+                    <h2 class="text-2xl font-bold">
+                        Removed Doctors
+                    </h2>
+
+                    <span
+                        class="bg-red-100 text-red-700
+                        text-sm font-medium
+                        px-3 py-1 rounded-full"
+                    >
+                        6 Doctors
+                    </span>
+
+                </div>
+
+                <p class="text-slate-500 mt-1">
+                    These doctors are currently hidden from patients.
+                </p>
+
+            </div>
+
+
+
+            <!-- Removed Doctors Grid -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4
+                gap-6"
+            >
+
+
+                <!-- Removed Doctor -->
+                <div
+                    class="bg-white rounded-3xl
+                    border border-red-200
+                    overflow-hidden shadow-sm"
+                >
+
+                    <div class="relative">
+
+                        <img
+                            src="../../public/doctor.jpg"
+                            alt="Dr. Hassan Ahmed"
+                            class="w-full h-56 object-cover
+                            grayscale opacity-70"
+                        >
+
+                        <span
+                            class="absolute top-4 right-4
+                            bg-red-100 text-red-700
+                            text-xs font-semibold
+                            px-3 py-1 rounded-full"
+                        >
+                            Removed
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-5">
+
+                        <h3 class="text-lg font-bold">
+                            Dr. Hassan Ahmed
+                        </h3>
+
+                        <p class="text-teal-600 text-sm font-medium">
+                            Neurologist
+                        </p>
+
+                        <p class="text-sm text-slate-500 mt-3">
+                            10 years experience
+                        </p>
+
+                        <div class="border-t border-slate-200 my-4"></div>
+
+
+                        <div class="flex gap-2">
+
+                            <button
+                                class="flex-1 py-2 rounded-xl
+                                bg-green-50 text-green-600
+                                font-medium text-sm
+                                hover:bg-green-100
+                                transition cursor-pointer"
+                            >
+                                Restore
+                            </button>
+
+                            <button
+                                class="px-4 py-2 rounded-xl
+                                border border-slate-300
+                                text-slate-600
+                                hover:bg-slate-100
+                                transition cursor-pointer"
+                            >
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Removed Doctor -->
+                <div
+                    class="bg-white rounded-3xl
+                    border border-red-200
+                    overflow-hidden shadow-sm"
+                >
+
+                    <div class="relative">
+
+                        <img
+                            src="../../public/doctor.jpg"
+                            alt="Dr. Maria Hassan"
+                            class="w-full h-56 object-cover
+                            grayscale opacity-70"
+                        >
+
+                        <span
+                            class="absolute top-4 right-4
+                            bg-red-100 text-red-700
+                            text-xs font-semibold
+                            px-3 py-1 rounded-full"
+                        >
+                            Removed
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-5">
+
+                        <h3 class="text-lg font-bold">
+                            Dr. Maria Hassan
+                        </h3>
+
+                        <p class="text-teal-600 text-sm font-medium">
+                            Ophthalmologist
+                        </p>
+
+                        <p class="text-sm text-slate-500 mt-3">
+                            8 years experience
+                        </p>
+
+                        <div class="border-t border-slate-200 my-4"></div>
+
+
+                        <div class="flex gap-2">
+
+                            <button
+                                class="flex-1 py-2 rounded-xl
+                                bg-green-50 text-green-600
+                                font-medium text-sm
+                                hover:bg-green-100
+                                transition cursor-pointer"
+                            >
+                                Restore
+                            </button>
+
+                            <button
+                                class="px-4 py-2 rounded-xl
+                                border border-slate-300
+                                text-slate-600
+                                hover:bg-slate-100
+                                transition cursor-pointer"
+                            >
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Removed Doctor -->
+                <div
+                    class="bg-white rounded-3xl
+                    border border-red-200
+                    overflow-hidden shadow-sm"
+                >
+
+                    <div class="relative">
+
+                        <img
+                            src="../../public/doctor.jpg"
+                            alt="Dr. Bilal Shah"
+                            class="w-full h-56 object-cover
+                            grayscale opacity-70"
+                        >
+
+                        <span
+                            class="absolute top-4 right-4
+                            bg-red-100 text-red-700
+                            text-xs font-semibold
+                            px-3 py-1 rounded-full"
+                        >
+                            Removed
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-5">
+
+                        <h3 class="text-lg font-bold">
+                            Dr. Bilal Shah
+                        </h3>
+
+                        <p class="text-teal-600 text-sm font-medium">
+                            Orthopedic Surgeon
+                        </p>
+
+                        <p class="text-sm text-slate-500 mt-3">
+                            14 years experience
+                        </p>
+
+                        <div class="border-t border-slate-200 my-4"></div>
+
+
+                        <div class="flex gap-2">
+
+                            <button
+                                class="flex-1 py-2 rounded-xl
+                                bg-green-50 text-green-600
+                                font-medium text-sm
+                                hover:bg-green-100
+                                transition cursor-pointer"
+                            >
+                                Restore
+                            </button>
+
+                            <button
+                                class="px-4 py-2 rounded-xl
+                                border border-slate-300
+                                text-slate-600
+                                hover:bg-slate-100
+                                transition cursor-pointer"
+                            >
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Removed Doctor -->
+                <div
+                    class="bg-white rounded-3xl
+                    border border-red-200
+                    overflow-hidden shadow-sm"
+                >
+
+                    <div class="relative">
+
+                        <img
+                            src="../../public/doctor.jpg"
+                            alt="Dr. Ayesha Khan"
+                            class="w-full h-56 object-cover
+                            grayscale opacity-70"
+                        >
+
+                        <span
+                            class="absolute top-4 right-4
+                            bg-red-100 text-red-700
+                            text-xs font-semibold
+                            px-3 py-1 rounded-full"
+                        >
+                            Removed
+                        </span>
+
+                    </div>
+
+
+                    <div class="p-5">
+
+                        <h3 class="text-lg font-bold">
+                            Dr. Ayesha Khan
+                        </h3>
+
+                        <p class="text-teal-600 text-sm font-medium">
+                            Gynecologist
+                        </p>
+
+                        <p class="text-sm text-slate-500 mt-3">
+                            13 years experience
+                        </p>
+
+                        <div class="border-t border-slate-200 my-4"></div>
+
+
+                        <div class="flex gap-2">
+
+                            <button
+                                class="flex-1 py-2 rounded-xl
+                                bg-green-50 text-green-600
+                                font-medium text-sm
+                                hover:bg-green-100
+                                transition cursor-pointer"
+                            >
+                                Restore
+                            </button>
+
+                            <button
+                                class="px-4 py-2 rounded-xl
+                                border border-slate-300
+                                text-slate-600
+                                hover:bg-slate-100
+                                transition cursor-pointer"
+                            >
+                                View
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-white mt-16">
+
+        <div class="max-w-7xl mx-auto px-6 py-8">
+
+            <div
+                class="flex flex-col md:flex-row
+                justify-between items-center gap-4"
+            >
+
+                <p class="text-blue-200">
+                    © 2026 MediCare. Host Dashboard
+                </p>
+
+                <p class="text-blue-300 text-sm">
+                    MediCare Administration
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

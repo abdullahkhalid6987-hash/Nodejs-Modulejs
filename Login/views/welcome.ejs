@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS Play CDN -->
+  <link rel="stylesheet" href="output.css">
+</head>
+<body class="w-full h-full bg-[url('./background.jpg')] bg-cover bg-no-repeat bg-center text-blue-100">
+    <nav class="flex ">
+        <ul class="flex  mx-auto space-x-5 mt-6">
+            <% if(isLoggedIn){ %>
+            <li class="w-24 text-center cursor-pointer text-xl border border-blue-100 px-3 py-3 rounded-2xl backdrop-blur-sm hover:underline hover:underline-offset-8 hover:bg-white/5"><a href="/logout">LogOut</a></li>
+            <% }else{ %>
+                   <li class="w-24 text-center cursor-pointer text-xl border border-blue-100 px-3 py-3 rounded-2xl backdrop-blur-sm hover:underline hover:underline-offset-8 hover:bg-white/5"><a href="/signup">SignUp</a></li>
+            <li class="w-24 text-center cursor-pointer text-xl border border-blue-100 px-3 py-3 rounded-2xl backdrop-blur-sm hover:underline hover:underline-offset-8 hover:bg-white/5"><a href="/login">Login</a></li>
+            <% } %>
+        </ul>
+    </nav>
+    <h1 class="text-5xl text-center mt-5">Welcome to the website</h1>
+
+    <% if(isLoggedIn && user.role === 'user'){ %>
+        <div class="backdrop-blur-sm mx-auto w-11/12 md:w-1/2 mt-10 mb-10 p-5 rounded-2xl border border-blue-100/20">
+            <div class="userInfo flex flex-col items-center justify-center space-y-2">
+                <div class="name text-xl bg-blue-400/30 w-20 h-20 rounded-full flex items-center justify-center"><span
+                        class="text-5xl">
+                        <%= user.firstName[0].toUpperCase()%>
+                    </span></div>
+                <div class="name text-xl"><span class="font-medium">Name: </span>
+                    <%= user.firstName+user.lastName %>
+                </div>
+                <div class="name text-xl"><span class="font-medium">Email: </span>
+                    <%= user.email %>
+                </div>
+                <div class="Gender text-xl"><span class="font-medium">Gender: </span>
+                    <%= user.gender %>
+                </div>
+            </div>
+        </div>
+    <% } else if(isLoggedIn && user.role === 'employee'){ %>
+        <div class="backdrop-blur-sm mx-auto w-11/12 md:w-1/2 mt-10 mb-10 p-5 rounded-2xl border border-blue-100/20">
+            <div class="userInfo flex flex-col items-center justify-center space-y-2">
+                <div class="name text-xl bg-blue-400/30 w-20 h-20 rounded-full flex items-center justify-center"><span
+                        class="text-5xl">
+                        <%= user.firstName[0].toUpperCase()%>
+                    </span></div>
+                <div class="name text-xl"><span class="font-medium">Name: </span>
+                    <%= user.firstName+user.lastName %>
+                </div>
+                <div class="name text-xl"><span class="font-medium">Email: </span>
+                    <%= user.email %>
+                </div>
+                <div class="Gender text-xl"><span class="font-medium">Gender: </span>
+                    <%= user.gender %>
+                </div>
+                <div class="role text-xl"><span class="font-medium">Role: </span>
+                    <%= user.role %>
+                </div>
+            </div>
+        </div>
+        <% const ignore = user._id.toString() %>
+        <div class="grid md:grid-cols-2">
+        <% allUsers.forEach(user =>{ %>
+            <% if(user._id.toString() !== ignore){ %>
+            <div
+                class="backdrop-blur-sm mx-auto w-11/12 mt-10 mb-10 p-5 rounded-2xl border border-blue-100/20">
+                <div class="userInfo flex flex-col items-center justify-center space-y-2">
+                    <div class="name text-xl bg-blue-400/30 w-20 h-20 rounded-full flex items-center justify-center"><span
+                            class="text-5xl">
+                            <%= user.firstName[0].toUpperCase()%>
+                        </span></div>
+                    <div class="name text-xl"><span class="font-medium">Name: </span>
+                        <%= user.firstName+user.lastName %>
+                    </div>
+                    <div class="name text-xl"><span class="font-medium">Email: </span>
+                        <%= user.email %>
+                    </div>
+                    <div class="Gender text-xl"><span class="font-medium">Gender: </span>
+                        <%= user.gender %>
+                    </div>
+                      <div class="role text-xl"><span class="font-medium">Role: </span>
+                    <%= user.role %>
+                </div>
+                </div>
+            </div>
+        <% }}) %>
+        </div>
+        <% } else if(isLoggedIn && user.role === 'admin'){ %>
+        <div class="backdrop-blur-sm mx-auto w-11/12 md:w-1/2 mt-10 mb-10 p-5 rounded-2xl border border-blue-100/20">
+            <div class="userInfo flex flex-col items-center justify-center space-y-2">
+                <div class="name text-xl bg-blue-400/30 w-20 h-20 rounded-full flex items-center justify-center"><span
+                        class="text-5xl">
+                        <%= user.firstName[0].toUpperCase()%>
+                    </span></div>
+                <div class="name text-xl"><span class="font-medium">Name: </span>
+                    <%= user.firstName+user.lastName %>
+                </div>
+                <div class="name text-xl"><span class="font-medium">Email: </span>
+                    <%= user.email %>
+                </div>
+                <div class="Gender text-xl"><span class="font-medium">Gender: </span>
+                    <%= user.gender %>
+                </div>
+                <div class="role text-xl"><span class="font-medium">Role: </span>
+                    <%= user.role %>
+                </div>
+            </div>
+        </div>
+        <% const ignore = user._id.toString() %>
+        <div class="line bg-blue-100/30 w-11/12 h-0.5 mx-auto"></div>
+        <div class="grid md:grid-cols-2">
+        <% allUsers.forEach(user =>{ %>
+            <% if(user._id.toString() !== ignore){ %>
+            <div
+                class="backdrop-blur-sm mx-auto w-11/12 mt-10 mb-10 p-5 rounded-2xl border border-blue-100/20">
+                <div class="userInfo flex flex-col items-center justify-center space-y-2">
+                    <div class="name text-xl bg-blue-400/30 w-20 h-20 rounded-full flex items-center justify-center"><span
+                            class="text-5xl">
+                            <%= user.firstName[0].toUpperCase()%>
+                        </span></div>
+                    <div class="name text-xl"><span class="font-medium">Name: </span>
+                        <%= user.firstName+user.lastName %>
+                    </div>
+                    <div class="name text-xl"><span class="font-medium">Email: </span>
+                        <%= user.email %>
+                    </div>
+                    <div class="Gender text-xl"><span class="font-medium">Gender: </span>
+                        <%= user.gender %>
+                    </div>
+                      <div class="role text-xl"><span class="font-medium">Role: </span>
+                    <%= user.role %>
+                </div>
+                <div class="w-fit text-center cursor-pointer text-xl border border-blue-100 px-3 py-3 rounded-2xl backdrop-blur-sm hover:underline hover:underline-offset-8 hover:bg-white/5"><a href="/changeRole/:<%= user._id %>">Change Role</a></div>
+                </div>
+            </div>
+        <% }}) %>
+        </div>
+    <% } else{ %>
+        <h1 class="text-3xl text-center mt-5 h-[100vh] overflow-hidden">Login to the website first or create an account.</h1>
+        <% } %>
+    
+</body>
+</html>

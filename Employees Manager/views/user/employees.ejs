@@ -1,0 +1,34 @@
+<%- include('../partials/head') %>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 antialiased">
+    <div class="flex h-screen overflow-hidden">
+        <%- include('../partials/navbar') %>
+        <main class="flex-1 flex flex-col overflow-y-auto">
+            <header class="bg-white border-b border-gray-200 h-16 flex items-center justify-between px-8 shrink-0">
+                <h1 class="text-xl font-bold text-gray-900">All Employees</h1>
+                <a href="admin/add-employee" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">+ Add Employee</a>
+            </header>
+            <div class="p-8 flex-1">
+                <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 border-b border-gray-200 text-xs font-semibold uppercase tracking-wider text-gray-500"><th class="px-6 py-4">Name</th><th class="px-6 py-4">Role</th><th class="px-6 py-4 text-right">Actions</th></tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 text-sm">
+                            <% employees.forEach(employee=>{ %>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium text-gray-900"><%= employee.name %></td>
+                                <td class="px-6 py-4 text-gray-600"><%= employee.role %></td>
+                                <td class="px-6 py-4 text-right space-x-2">
+                                    <a href="employee-details" class="text-indigo-600 hover:text-indigo-900 font-medium">View</a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

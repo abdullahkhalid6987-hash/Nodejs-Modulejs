@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../public/output.css">
+
+    <title>MediCare - Doctors</title>
+</head>
+
+<body class="bg-slate-50">
+
+    <!-- Navbar -->
+    <nav class="text-white w-full py-5 bg-blue-950">
+
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+
+            <a href="#" class="text-xl font-bold">
+                MediCare
+            </a>
+
+            <ul class="hidden md:flex items-center space-x-6">
+
+                <li>
+                    <a
+                        href="#"
+                        class="hover:text-teal-300 transition"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#"
+                        class="text-teal-300 font-medium"
+                    >
+                        Doctors
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#"
+                        class="hover:text-teal-300 transition"
+                    >
+                        Appointment
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#"
+                        class="hover:text-teal-300 transition"
+                    >
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main -->
+    <main class="max-w-7xl mx-auto px-5 md:px-8 py-14">
+
+        <!-- Header -->
+        <div class="text-center mb-12">
+
+            <p class="text-teal-600 font-semibold mb-2">
+                Our Specialists
+            </p>
+
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900">
+                Meet Our Doctors
+            </h1>
+
+            <p class="text-slate-500 max-w-2xl mx-auto mt-4 text-lg">
+                Find experienced and trusted healthcare professionals
+                ready to provide the care you need.
+            </p>
+
+        </div>
+
+
+        <!-- Search -->
+        <div class="max-w-xl mx-auto mb-12">
+
+            <div class="relative">
+
+                <input
+                    type="text"
+                    placeholder="Search doctors or specialties..."
+                    class="w-full px-5 py-4 pr-12 rounded-2xl
+                    bg-white border border-slate-300
+                    outline-none text-slate-900
+                    focus:border-teal-500
+                    focus:ring-4 focus:ring-teal-500/10
+                    transition"
+                >
+
+                <span
+                    class="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 text-xl"
+                >
+                    🔍
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Doctors Grid -->
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+
+
+            <!-- Doctor 1 -->
+            <div
+                class="bg-white rounded-3xl border border-slate-200
+                overflow-hidden shadow-sm hover:shadow-xl
+                transition duration-300 group"
+            >
+
+                <div class="relative">
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Ahmed Khan"
+                        class="w-full h-64 object-cover
+                        group-hover:scale-105 transition duration-300"
+                    >
+
+                    <span
+                        class="absolute top-4 right-4
+                        bg-green-100 text-green-700
+                        text-xs font-semibold
+                        px-3 py-1 rounded-full"
+                    >
+                        Available
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h2 class="text-xl font-bold text-slate-900">
+                        Dr. Ahmed Khan
+                    </h2>
+
+                    <p class="text-teal-600 font-medium mt-1">
+                        Cardiologist
+                    </p>
+
+                    <p class="text-slate-500 text-sm mt-3">
+                        12 years of experience
+                    </p>
+
+                    <div
+                        class="border-t border-slate-200 my-4"
+                    ></div>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-sm text-slate-500">
+                            ⭐ 4.9
+                        </span>
+
+                        <a
+                            href="#"
+                            class="bg-teal-600 text-white
+                            px-4 py-2 rounded-xl
+                            text-sm font-medium
+                            hover:bg-teal-700 transition"
+                        >
+                            Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Doctor 2 -->
+            <div
+                class="bg-white rounded-3xl border border-slate-200
+                overflow-hidden shadow-sm hover:shadow-xl
+                transition duration-300 group"
+            >
+
+                <div class="relative">
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Sarah Ali"
+                        class="w-full h-64 object-cover
+                        group-hover:scale-105 transition duration-300"
+                    >
+
+                    <span
+                        class="absolute top-4 right-4
+                        bg-green-100 text-green-700
+                        text-xs font-semibold
+                        px-3 py-1 rounded-full"
+                    >
+                        Available
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h2 class="text-xl font-bold text-slate-900">
+                        Dr. Sarah Ali
+                    </h2>
+
+                    <p class="text-teal-600 font-medium mt-1">
+                        Dermatologist
+                    </p>
+
+                    <p class="text-slate-500 text-sm mt-3">
+                        9 years of experience
+                    </p>
+
+                    <div
+                        class="border-t border-slate-200 my-4"
+                    ></div>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-sm text-slate-500">
+                            ⭐ 4.8
+                        </span>
+
+                        <a
+                            href="#"
+                            class="bg-teal-600 text-white
+                            px-4 py-2 rounded-xl
+                            text-sm font-medium
+                            hover:bg-teal-700 transition"
+                        >
+                            Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Doctor 3 -->
+            <div
+                class="bg-white rounded-3xl border border-slate-200
+                overflow-hidden shadow-sm hover:shadow-xl
+                transition duration-300 group"
+            >
+
+                <div class="relative">
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Usman Malik"
+                        class="w-full h-64 object-cover
+                        group-hover:scale-105 transition duration-300"
+                    >
+
+                    <span
+                        class="absolute top-4 right-4
+                        bg-yellow-100 text-yellow-700
+                        text-xs font-semibold
+                        px-3 py-1 rounded-full"
+                    >
+                        Busy
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h2 class="text-xl font-bold text-slate-900">
+                        Dr. Usman Malik
+                    </h2>
+
+                    <p class="text-teal-600 font-medium mt-1">
+                        General Physician
+                    </p>
+
+                    <p class="text-slate-500 text-sm mt-3">
+                        15 years of experience
+                    </p>
+
+                    <div
+                        class="border-t border-slate-200 my-4"
+                    ></div>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-sm text-slate-500">
+                            ⭐ 4.7
+                        </span>
+
+                        <a
+                            href="#"
+                            class="bg-teal-600 text-white
+                            px-4 py-2 rounded-xl
+                            text-sm font-medium
+                            hover:bg-teal-700 transition"
+                        >
+                            Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Doctor 4 -->
+            <div
+                class="bg-white rounded-3xl border border-slate-200
+                overflow-hidden shadow-sm hover:shadow-xl
+                transition duration-300 group"
+            >
+
+                <div class="relative">
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Fatima Noor"
+                        class="w-full h-64 object-cover
+                        group-hover:scale-105 transition duration-300"
+                    >
+
+                    <span
+                        class="absolute top-4 right-4
+                        bg-green-100 text-green-700
+                        text-xs font-semibold
+                        px-3 py-1 rounded-full"
+                    >
+                        Available
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h2 class="text-xl font-bold text-slate-900">
+                        Dr. Fatima Noor
+                    </h2>
+
+                    <p class="text-teal-600 font-medium mt-1">
+                        Pediatrician
+                    </p>
+
+                    <p class="text-slate-500 text-sm mt-3">
+                        11 years of experience
+                    </p>
+
+                    <div
+                        class="border-t border-slate-200 my-4"
+                    ></div>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-sm text-slate-500">
+                            ⭐ 4.9
+                        </span>
+
+                        <a
+                            href="#"
+                            class="bg-teal-600 text-white
+                            px-4 py-2 rounded-xl
+                            text-sm font-medium
+                            hover:bg-teal-700 transition"
+                        >
+                            Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Doctor 5 -->
+            <div
+                class="bg-white rounded-3xl border border-slate-200
+                overflow-hidden shadow-sm hover:shadow-xl
+                transition duration-300 group"
+            >
+
+                <div class="relative">
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Hamza Ahmed"
+                        class="w-full h-64 object-cover
+                        group-hover:scale-105 transition duration-300"
+                    >
+
+                    <span
+                        class="absolute top-4 right-4
+                        bg-green-100 text-green-700
+                        text-xs font-semibold
+                        px-3 py-1 rounded-full"
+                    >
+                        Available
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h2 class="text-xl font-bold text-slate-900">
+                        Dr. Hamza Ahmed
+                    </h2>
+
+                    <p class="text-teal-600 font-medium mt-1">
+                        Neurologist
+                    </p>
+
+                    <p class="text-slate-500 text-sm mt-3">
+                        10 years of experience
+                    </p>
+
+                    <div class="border-t border-slate-200 my-4"></div>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-sm text-slate-500">
+                            ⭐ 4.8
+                        </span>
+
+                        <a
+                            href="#"
+                            class="bg-teal-600 text-white
+                            px-4 py-2 rounded-xl
+                            text-sm font-medium
+                            hover:bg-teal-700 transition"
+                        >
+                            Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Doctor 6 -->
+            <div
+                class="bg-white rounded-3xl border border-slate-200
+                overflow-hidden shadow-sm hover:shadow-xl
+                transition duration-300 group"
+            >
+
+                <div class="relative">
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Ayesha Khan"
+                        class="w-full h-64 object-cover
+                        group-hover:scale-105 transition duration-300"
+                    >
+
+                    <span
+                        class="absolute top-4 right-4
+                        bg-green-100 text-green-700
+                        text-xs font-semibold
+                        px-3 py-1 rounded-full"
+                    >
+                        Available
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h2 class="text-xl font-bold text-slate-900">
+                        Dr. Ayesha Khan
+                    </h2>
+
+                    <p class="text-teal-600 font-medium mt-1">
+                        Gynecologist
+                    </p>
+
+                    <p class="text-slate-500 text-sm mt-3">
+                        13 years of experience
+                    </p>
+
+                    <div class="border-t border-slate-200 my-4"></div>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-sm text-slate-500">
+                            ⭐ 4.9
+                        </span>
+
+                        <a
+                            href="#"
+                            class="bg-teal-600 text-white
+                            px-4 py-2 rounded-xl
+                            text-sm font-medium
+                            hover:bg-teal-700 transition"
+                        >
+                            Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Doctor 7 -->
+            <div
+                class="bg-white rounded-3xl border border-slate-200
+                overflow-hidden shadow-sm hover:shadow-xl
+                transition duration-300 group"
+            >
+
+                <div class="relative">
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Bilal Shah"
+                        class="w-full h-64 object-cover
+                        group-hover:scale-105 transition duration-300"
+                    >
+
+                    <span
+                        class="absolute top-4 right-4
+                        bg-yellow-100 text-yellow-700
+                        text-xs font-semibold
+                        px-3 py-1 rounded-full"
+                    >
+                        Busy
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h2 class="text-xl font-bold text-slate-900">
+                        Dr. Bilal Shah
+                    </h2>
+
+                    <p class="text-teal-600 font-medium mt-1">
+                        Orthopedic Surgeon
+                    </p>
+
+                    <p class="text-slate-500 text-sm mt-3">
+                        14 years of experience
+                    </p>
+
+                    <div class="border-t border-slate-200 my-4"></div>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-sm text-slate-500">
+                            ⭐ 4.7
+                        </span>
+
+                        <a
+                            href="#"
+                            class="bg-teal-600 text-white
+                            px-4 py-2 rounded-xl
+                            text-sm font-medium
+                            hover:bg-teal-700 transition"
+                        >
+                            Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Doctor 8 -->
+            <div
+                class="bg-white rounded-3xl border border-slate-200
+                overflow-hidden shadow-sm hover:shadow-xl
+                transition duration-300 group"
+            >
+
+                <div class="relative">
+
+                    <img
+                        src="../../public/doctor.jpg"
+                        alt="Dr. Maria Hassan"
+                        class="w-full h-64 object-cover
+                        group-hover:scale-105 transition duration-300"
+                    >
+
+                    <span
+                        class="absolute top-4 right-4
+                        bg-green-100 text-green-700
+                        text-xs font-semibold
+                        px-3 py-1 rounded-full"
+                    >
+                        Available
+                    </span>
+
+                </div>
+
+
+                <div class="p-5">
+
+                    <h2 class="text-xl font-bold text-slate-900">
+                        Dr. Maria Hassan
+                    </h2>
+
+                    <p class="text-teal-600 font-medium mt-1">
+                        Ophthalmologist
+                    </p>
+
+                    <p class="text-slate-500 text-sm mt-3">
+                        8 years of experience
+                    </p>
+
+                    <div class="border-t border-slate-200 my-4"></div>
+
+                    <div class="flex justify-between items-center">
+
+                        <span class="text-sm text-slate-500">
+                            ⭐ 4.8
+                        </span>
+
+                        <a
+                            href="#"
+                            class="bg-teal-600 text-white
+                            px-4 py-2 rounded-xl
+                            text-sm font-medium
+                            hover:bg-teal-700 transition"
+                        >
+                            Book
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-white mt-10">
+
+        <div class="max-w-7xl mx-auto px-6 py-10">
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <div>
+                    <h2 class="text-2xl font-bold mb-3">
+                        MediCare
+                    </h2>
+
+                    <p class="text-blue-200">
+                        Making healthcare simple and accessible.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-3">
+                        Quick Links
+                    </h3>
+
+                    <div class="flex flex-col gap-2 text-blue-200">
+                        <a href="#" class="hover:text-white">
+                            Home
+                        </a>
+
+                        <a href="#" class="hover:text-white">
+                            Doctors
+                        </a>
+
+                        <a href="#" class="hover:text-white">
+                            Appointments
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold mb-3">
+                        Contact
+                    </h3>
+
+                    <p class="text-blue-200">
+                        support@medicare.com
+                    </p>
+
+                    <p class="text-blue-200 mt-2">
+                        +92 300 1234567
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="border-t border-blue-900 mt-8 pt-6 text-center text-blue-300">
+                © 2026 MediCare. All rights reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

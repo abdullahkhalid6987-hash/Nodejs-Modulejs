@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../public/output.css">
+
+    <title>MediCare - Book Appointment</title>
+</head>
+
+<body class="min-h-screen bg-slate-50">
+
+    <!-- Navbar -->
+    <nav class="text-white w-full py-5 bg-blue-950">
+
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+
+            <a href="#" class="text-xl font-bold">
+                MediCare
+            </a>
+
+            <ul class="hidden md:flex items-center space-x-6">
+
+                <li>
+                    <a href="#" class="hover:text-teal-300 transition">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="hover:text-teal-300 transition">
+                        Doctors
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="text-teal-300 font-medium">
+                        Appointment
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#" class="hover:text-teal-300 transition">
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main -->
+    <main class="py-12 px-5">
+
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Heading -->
+            <div class="text-center mb-10">
+
+                <p class="text-teal-600 font-semibold mb-2">
+                    MediCare
+                </p>
+
+                <h1 class="text-4xl md:text-5xl font-bold text-slate-900">
+                    Book an Appointment
+                </h1>
+
+                <p class="text-slate-500 mt-4 max-w-xl mx-auto">
+                    Choose your doctor, select a convenient time, and
+                    provide a few details so we can prepare for your visit.
+                </p>
+
+            </div>
+
+
+            <!-- Form Card -->
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200 p-6 md:p-10">
+
+                <form class="space-y-10">
+
+
+                    <!-- Patient Information -->
+                    <section>
+
+                        <div class="flex items-center gap-3 mb-6">
+
+                            <div
+                                class="w-10 h-10 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold"
+                            >
+                                1
+                            </div>
+
+                            <div>
+                                <h2 class="text-xl font-bold text-slate-900">
+                                    Patient Information
+                                </h2>
+
+                                <p class="text-sm text-slate-500">
+                                    Tell us who the appointment is for.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                            <!-- Name -->
+                            <div class="md:col-span-2">
+
+                                <label
+                                    for="patient-name"
+                                    class="block text-sm font-medium text-slate-700 mb-2"
+                                >
+                                    Patient Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="patient-name"
+                                    placeholder="Enter patient's full name"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300
+                                    outline-none text-slate-900
+                                    focus:border-teal-500
+                                    focus:ring-4 focus:ring-teal-500/10
+                                    transition"
+                                >
+
+                            </div>
+
+
+                            <!-- Age -->
+                            <div>
+
+                                <label
+                                    for="age"
+                                    class="block text-sm font-medium text-slate-700 mb-2"
+                                >
+                                    Age
+                                </label>
+
+                                <input
+                                    type="number"
+                                    id="age"
+                                    min="1"
+                                    max="120"
+                                    placeholder="e.g. 25"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300
+                                    outline-none text-slate-900
+                                    focus:border-teal-500
+                                    focus:ring-4 focus:ring-teal-500/10
+                                    transition"
+                                >
+
+                            </div>
+
+
+                            <!-- Gender -->
+                            <div>
+
+                                <label
+                                    for="gender"
+                                    class="block text-sm font-medium text-slate-700 mb-2"
+                                >
+                                    Gender
+                                </label>
+
+                                <select
+                                    id="gender"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300
+                                    bg-white outline-none text-slate-900
+                                    focus:border-teal-500
+                                    focus:ring-4 focus:ring-teal-500/10
+                                    transition"
+                                >
+
+                                    <option value="" selected disabled>
+                                        Select gender
+                                    </option>
+
+                                    <option value="male">
+                                        Male
+                                    </option>
+
+                                    <option value="female">
+                                        Female
+                                    </option>
+
+                                    <option value="other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Phone -->
+                            <div class="md:col-span-2">
+
+                                <label
+                                    for="phone"
+                                    class="block text-sm font-medium text-slate-700 mb-2"
+                                >
+                                    Phone Number
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    placeholder="+92 300 1234567"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300
+                                    outline-none text-slate-900
+                                    focus:border-teal-500
+                                    focus:ring-4 focus:ring-teal-500/10
+                                    transition"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Divider -->
+                    <div class="border-t border-slate-200"></div>
+
+
+                    <!-- Doctor & Appointment -->
+                    <section>
+
+                        <div class="flex items-center gap-3 mb-6">
+
+                            <div
+                                class="w-10 h-10 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold"
+                            >
+                                2
+                            </div>
+
+                            <div>
+                                <h2 class="text-xl font-bold text-slate-900">
+                                    Appointment Details
+                                </h2>
+
+                                <p class="text-sm text-slate-500">
+                                    Choose your doctor and preferred time.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                            <!-- Doctor -->
+                            <div class="md:col-span-2">
+
+                                <label
+                                    for="doctor"
+                                    class="block text-sm font-medium text-slate-700 mb-2"
+                                >
+                                    Select Doctor
+                                </label>
+
+                                <select
+                                    id="doctor"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300
+                                    bg-white outline-none text-slate-900
+                                    focus:border-teal-500
+                                    focus:ring-4 focus:ring-teal-500/10
+                                    transition"
+                                >
+
+                                    <option value="" selected disabled>
+                                        Choose a doctor
+                                    </option>
+
+                                    <option value="dr-ahmed">
+                                        Dr. Ahmed Khan — Cardiologist
+                                    </option>
+
+                                    <option value="dr-sarah">
+                                        Dr. Sarah Ali — Dermatologist
+                                    </option>
+
+                                    <option value="dr-usman">
+                                        Dr. Usman Malik — General Physician
+                                    </option>
+
+                                    <option value="dr-fatima">
+                                        Dr. Fatima Noor — Pediatrician
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- Date -->
+                            <div>
+
+                                <label
+                                    for="date"
+                                    class="block text-sm font-medium text-slate-700 mb-2"
+                                >
+                                    Appointment Date
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="date"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300
+                                    outline-none text-slate-900
+                                    focus:border-teal-500
+                                    focus:ring-4 focus:ring-teal-500/10
+                                    transition"
+                                >
+
+                            </div>
+
+
+                            <!-- Time -->
+                            <div>
+
+                                <label
+                                    for="time"
+                                    class="block text-sm font-medium text-slate-700 mb-2"
+                                >
+                                    Preferred Time
+                                </label>
+
+                                <input
+                                    type="time"
+                                    id="time"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300
+                                    outline-none text-slate-900
+                                    focus:border-teal-500
+                                    focus:ring-4 focus:ring-teal-500/10
+                                    transition"
+                                >
+
+                            </div>
+
+
+                            <!-- Appointment Type -->
+                            <div class="md:col-span-2">
+
+                                <label
+                                    for="appointment-type"
+                                    class="block text-sm font-medium text-slate-700 mb-2"
+                                >
+                                    Appointment Type
+                                </label>
+
+                                <select
+                                    id="appointment-type"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300
+                                    bg-white outline-none text-slate-900
+                                    focus:border-teal-500
+                                    focus:ring-4 focus:ring-teal-500/10
+                                    transition"
+                                >
+
+                                    <option value="" selected disabled>
+                                        Select appointment type
+                                    </option>
+
+                                    <option value="in-person">
+                                        In-person consultation
+                                    </option>
+
+                                    <option value="online">
+                                        Online consultation
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+                    <!-- Divider -->
+                    <div class="border-t border-slate-200"></div>
+
+
+                    <!-- Additional Information -->
+                    <section>
+
+                        <div class="flex items-center gap-3 mb-6">
+
+                            <div
+                                class="w-10 h-10 rounded-full bg-teal-100 text-teal-700 flex items-center justify-center font-bold"
+                            >
+                                3
+                            </div>
+
+                            <div>
+                                <h2 class="text-xl font-bold text-slate-900">
+                                    Additional Information
+                                </h2>
+
+                                <p class="text-sm text-slate-500">
+                                    Tell the doctor anything important about your visit.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <label
+                            for="reason"
+                            class="block text-sm font-medium text-slate-700 mb-2"
+                        >
+                            Reason for Visit
+                        </label>
+
+                        <textarea
+                            id="reason"
+                            rows="4"
+                            placeholder="Briefly describe the reason for your appointment..."
+                            class="w-full px-4 py-3 rounded-xl border border-slate-300
+                            outline-none text-slate-900 resize-none
+                            focus:border-teal-500
+                            focus:ring-4 focus:ring-teal-500/10
+                            transition"
+                        ></textarea>
+
+                    </section>
+
+
+                    <!-- Confirmation -->
+                    <div class="bg-slate-50 rounded-2xl p-5">
+
+                        <div class="flex items-start gap-3">
+
+                            <input
+                                type="checkbox"
+                                id="confirmation"
+                                class="w-5 h-5 mt-1 accent-teal-600"
+                            >
+
+                            <label
+                                for="confirmation"
+                                class="text-sm text-slate-600 leading-relaxed"
+                            >
+                                I confirm that the information provided above
+                                is accurate and I would like to request this
+                                appointment.
+                            </label>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="w-full py-4 rounded-xl
+                        bg-teal-600 text-white font-semibold text-lg
+                        hover:bg-teal-700
+                        active:scale-[0.99]
+                        transition duration-200
+                        cursor-pointer"
+                    >
+                        Book Appointment
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-950 text-white">
+
+        <div class="max-w-7xl mx-auto px-6 py-8 text-center">
+
+            <p class="text-blue-200">
+                © 2026 MediCare. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
